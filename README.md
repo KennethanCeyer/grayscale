@@ -3,6 +3,8 @@
 
 ## Performances
 
+Performance code: [main.py](https://github.com/KennethanCeyer/grayscale/blob/main/main.py)
+
 Function | Data Size | Hit        | Python           | Clang
 :-------:|----------:|-----------:|-----------------:|-----------------:
 sum      | 5,000     | 10         |     0.2503ms     |     0.5932ms
