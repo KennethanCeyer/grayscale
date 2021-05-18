@@ -15,8 +15,10 @@ By bypassing the thread resource through C, the CPU bound resource is provided o
 from concurrent import futures
 import json
 
+
 def my_func(url):
     return json.loads(my_json_lists)
+
 
 with futures.ThreadPoolExecutor(max_workers=5) as executor:
     # This is a CPU-bound process, It will be a bottle-neck by GIL(Global Interpreter Lock)
@@ -29,8 +31,10 @@ with futures.ThreadPoolExecutor(max_workers=5) as executor:
 from grayscale.thread import Pool
 import json
 
+
 def my_func(url):
     return json.loads(my_json_lists) # json pkg, my_json_lists will be refered in C(DLL) API
+
 
 def Pool(workers=5) as pool:
     # This thread reflects all the reference of the function provided
