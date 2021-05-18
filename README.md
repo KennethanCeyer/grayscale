@@ -100,7 +100,72 @@ std      | 5,000     | 100,000    | 94582.3715ms     | 27095.2179ms
 
 ## Roadmap
 
+### Computation Operators
+- [x] sum
+- [x] mean
+- [x] var
+- [x] std
+- [ ] median
+- [ ] floor
+- [ ] ceil
+- [ ] exp
+- [ ] log2
+- [ ] log10
+- [ ] matmul
+- [ ] inner
+- [ ] outer
+- [ ] prod
+- [ ] transpose
+- [ ] tile
+- [ ] shape
+- [ ] dot
+- [ ] all
+- [ ] any
+- [ ] isnan
+- [ ] create
+- [ ] ones
+- [ ] min
+- [ ] max
+- [ ] reshape
 
+### Threading
+- [ ] Pool
+    - [ ] map
+    - [ ] reduce
+    - [ ] stream
+    - [ ] async/await support (Allow other coroutines to occupy while the pool is waiting)
+- [ ] fork
+- [ ] join
+
+### Parallel (OMP based)
+- [ ] Pool
+    - [ ] map
+    - [ ] reduce
+    - [ ] stream
+    - [ ] async/await support (Allow other coroutines to occupy while the pool is waiting)
+
+### Parallel (AsyncIO based)
+- [ ] Pool
+    - [ ] map
+    - [ ] reduce
+    - [ ] stream
+
+### CUDA
+
+- [ ] add
+- [ ] substract
+- [ ] floor
+- [ ] ceil
+- [ ] log2
+- [ ] log10
+- [ ] matmul
+- [ ] divide
+- [ ] dot
+- [ ] exp
+- [ ] prod
+- [ ] all
+- [ ] any
+- [ ] isnan
 
 ## Reference
 
