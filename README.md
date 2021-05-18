@@ -75,7 +75,7 @@ The function we want to use is very simple, but wasn't there a case where the pr
 
 Performance code: [main.py](https://github.com/KennethanCeyer/grayscale/blob/main/main.py)
 
-Function | Data Size | Hit        | Python           | Clang
+Function | Data Size | Hit        | Python(3.9)      | Clang
 :-------:|----------:|-----------:|-----------------:|-----------------:
 sum      | 5,000     | 10         |     0.2503ms     |     0.5932ms
 sum      | 5,000     | 100        |     2.4950ms     |     5.3709ms
