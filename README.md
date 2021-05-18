@@ -171,6 +171,25 @@ std      | 5,000     | 100,000    | 94582.3715ms     | 27095.2179ms
 - [ ] any
 - [ ] isnan
 
+### Example
+
+**Machine Learning**
+
+- [ ] MNIST Training Example (w/o ML Framework)
+- [ ] Transformer iterative matmul calculation
+- [ ] Batch Inferencing Parallelization
+
+**Computing**
+
+- [ ] Serialize/deserialize in 10 million protobuf thread environments
+- [ ] Microphone voice background thread pipeline processing
+- [ ] Distributed Web Server Worker
+
+**Data Engineering**
+
+- [ ] Large web crawl
+- [ ] Parallelize data processing
+
 ## Reference
 
 - [grayscale c lib](https://github.com/KennethanCeyer/grayscale_c)
