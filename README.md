@@ -19,7 +19,8 @@ def my_func(url):
     return json.loads(my_json_lists)
 
 with futures.ThreadPoolExecutor(max_workers=5) as executor:
-    res = list(executor.map(my_func, my_json_lists)) # This is a CPU-bound process, It will be a bottle-neck by GIL(Global Interpreter Lock)
+    # This is a CPU-bound process, It will be a bottle-neck by GIL(Global Interpreter Lock)
+    res = list(executor.map(my_func, my_json_lists))
 ```
 
 **Grayscale Thread**
@@ -32,10 +33,12 @@ def my_func(url):
     return json.loads(my_json_lists) # json pkg, my_json_lists will be refered in C(DLL) API
 
 def Pool(workers=5) as pool:
-    res = list(pool.map(my_func, my_json_lists)) # This 
+    # This thread reflects all the reference of the function provided
+    # by the user and activates the thread after cloning the C function,
+    # so the user cannot write to the reference of the existing variable. However,
+    # we plan to provide guidelines on how to share variables through pipes and queues.
+    res = list(pool.map(my_func, my_json_lists))
 ```
-
-This thread reflects all the reference of the function provided by the user and activates the thread after cloning the C function, so the user cannot write to the reference of the existing variable. However, we plan to provide guidelines on how to share variables through pipes and queues.
 
 It operates in a completely different way from the previous thread.
 The above function is transferred to PyObject through DLL, converted to CallableObject and called.
