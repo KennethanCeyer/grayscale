@@ -1,5 +1,7 @@
 from typing import List
 
+from grayscale.clang import dll
+
 
 def mean(nums: List[float]) -> float:
-    return sum(nums) / len(nums)
+    return dll.gs_mean(nums)

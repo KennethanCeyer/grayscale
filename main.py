@@ -1,7 +1,17 @@
 from timeit import timeit
 
-from grayscale.clang.lib import dll
-from grayscale.math import sum, mean, var, std
+from grayscale.clang.math import sum as c_sum
+from grayscale.clang.math import mean as c_mean
+from grayscale.clang.math import var as c_var
+from grayscale.clang.math import std as c_std
+from grayscale.clang.math import min as c_min
+from grayscale.clang.math import max as c_max
+from grayscale.math import sum
+from grayscale.math import mean
+from grayscale.math import var
+from grayscale.math import std
+from grayscale.math import min
+from grayscale.math import max
 
 
 def create_data():
@@ -11,10 +21,10 @@ def create_data():
 def perf():
     data = create_data()
     funs = [
-        sum, mean, var, std,
+        sum, mean, var, std, min, max,
     ]
     native_funs = [
-        dll.sum, dll.mean, dll.var, dll.std,
+        c_sum, c_mean, c_var, c_std, c_min, c_max,
     ]
 
     for fun, native_fun in zip(funs, native_funs):
