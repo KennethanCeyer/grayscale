@@ -109,6 +109,8 @@ std      | 5,000     | 100,000    | 94582.3715ms     | 27095.2179ms
 - [x] mean
 - [x] var
 - [x] std
+- [x] pow
+- [x] sqrt
 - [ ] median
 - [ ] floor
 - [ ] ceil
@@ -128,8 +130,8 @@ std      | 5,000     | 100,000    | 94582.3715ms     | 27095.2179ms
 - [ ] isnan
 - [ ] create
 - [ ] ones
-- [ ] min
-- [ ] max
+- [x] min
+- [x] max
 - [ ] reshape
 
 ### Threading
