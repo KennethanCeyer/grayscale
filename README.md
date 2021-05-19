@@ -65,7 +65,7 @@ Therefore, this project aims to optimize and provide all calculation functions t
 
 For machine learning projects or data analysis, numpy and sklearn are adopted. This expands the basic data type of python to handle large vector operations stably, but it does not fully utilize the given resources, and unnecessary memory waste occurs in the process of boxing and unboxing.
 
-This project creates an inline assembly in C language to test the functions of AVX, tests the experimental functions of BLAS, SIMD, and SSD, and plans to upgrade the functions to a level that can be used at the commercial level.
+This project creates an inline assembly in C language to test the functions of AVX, tests the experimental functions of BLAS, SIMD, and SSE, and plans to upgrade the functions to a level that can be used at the commercial level.
 
 ### User-friendly interface
 
